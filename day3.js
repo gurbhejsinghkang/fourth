@@ -32,3 +32,8 @@ function data() {
 }
 data2 = data;
 console.log(data2());
+let result = function (miles) {
+    var kilometers = (miles / 0.63).toFixed(2);
+    return miles + ' miles=' + kilometers + 'kiolemeters';
+}
+console.log(result(10));
