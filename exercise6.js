@@ -33,7 +33,3 @@ console.log(rel1.getresult());
 var rel2 = ATM(100);
 rel2.withdrawl(1000);
 console.log(rel2.getresult());
-
-
-
-
