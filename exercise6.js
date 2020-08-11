@@ -1,4 +1,5 @@
 console.log("hello");
+
 function ATM(accountno) {
     var balance = 0;
     var msg;
@@ -18,7 +19,7 @@ function ATM(accountno) {
             }
         },
         getresult: function () {
-            return "account no " + accountno + "balance is " + balance;
+            return "account no " + accountno + "\nbalance is " + balance;
         }
     }
 }
@@ -33,3 +34,9 @@ console.log(rel1.getresult());
 var rel2 = ATM(100);
 rel2.withdrawl(1000);
 console.log(rel2.getresult());
+
+
+
+
+
+
