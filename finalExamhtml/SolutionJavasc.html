@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <img src="papillon.png">
+    <button onclick="myFunction()">Like</button>
+    <p id="demo"></p>
+    <script>
+        var count = 0;
+        class Like {
+            state = off;
+            numofLikes;
+            constructor(likes) {
+                this.numofLikes = likes;
+                this.state = on;
+            }
+            method() {
+                if (this.state = on) {
+                    this.numofLikes = this.numofLikes + 1;
+                    this.state = off;
+                }
+                else {
+                    this.numofLikes = this.numofLikes - 1;
+                    this.state = on;
+                }
+            }
+        }
+        function myFunction() {
+            if (count == 0) {
+                count = count + 1;
+                let l1 = new Like(218);
+                l1.method();
+                document.getElementById("demo").innerHTML = l1.numofLikes;
+            }
+            else {
+                l1.method();
+                document.getElementById("demo").innerHTML = l1.numofLikes;
+            }
+        }
+    </script>
+</body>
+
+</html>

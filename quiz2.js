@@ -14,8 +14,13 @@ class Account {
         }
     }
     credit(amount) {
-        this.balance = this.balance + amount;
-        return true;
+        if (amount <= 0) {
+            return false;
+        }
+        else {
+            this.balance = this.balance + amount;
+            return true;
+        }
     }
     getBalance() {
         return this.balance;
@@ -28,7 +33,9 @@ class SavingAccount extends Account {
         this.interestRate = interestrate;
     }
     calculateInterest() {
-        return (this.interestRate / 100) * this.getBalance();
+        var result = (this.interestRate / 100) * this.getBalance();
+        this.credit(result);
+        return result;
     }
 }
 class CheckingAccount extends Account {
@@ -48,6 +55,10 @@ class CheckingAccount extends Account {
         }
     }
 }
+let trans = new SavingAccount(100000, 2);
+console.log("the balance before calculating interest=" + trans.getBalance());
+console.log("the interest on ur initial balance will be " + trans.calculateInterest());
+console.log("the balance after calculating interest=" + trans.getBalance());
 
 // let trans = new Account(500);
 // trans.debit(100);
